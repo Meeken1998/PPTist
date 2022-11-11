@@ -10,7 +10,7 @@ type RequestFn = <T = any>(url: string, data?: any) => Promise<T>
 
 export default (token: string, isDev: boolean) => {
   if (!isDev) {
-    axios.defaults.baseURL = 'https://storyboard-api.aside.fun'
+    axios.defaults.baseURL = 'https://shot-api.infmonkeys.com'
   }
 
   async function request<T>(method: Method, url: string, data: any): Promise<T> {

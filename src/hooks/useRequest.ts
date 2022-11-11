@@ -14,13 +14,13 @@ type RequestFn = <T = any>(
 ) => Promise<T>
 
 export const HTTP_SERVICE_ENDPOINT =
-  process.env.NODE_ENV !== 'development' ? 'https://storyboard-api.aside.fun' : 'http://localhost:3000'
+  process.env.NODE_ENV !== 'development' ? 'https://shot-api.infmonkeys.com' : 'http://localhost:3000'
 export const WS_SERVICE_ENDPOINT =
-  process.env.NODE_ENV !== 'development' ? 'wss://storyboard-api.aside.fun' : 'ws://localhost:3000'
+  process.env.NODE_ENV !== 'development' ? 'wss://shot-api.infmonkeys.com' : 'ws://localhost:3000'
 
 export default () => {
   const axios = new Axios({
-    baseURL: process.env.NODE_ENV !== 'development' ? 'https://storyboard-api.aside.fun' : '',
+    baseURL: process.env.NODE_ENV !== 'development' ? 'https://shot-api.infmonkeys.com' : '',
   })
 
   async function request<T>(method: Method, url: string, data = {}, headers?: Record<string, string>): Promise<T> {

@@ -39,7 +39,7 @@ exports.__esModule = true;
 var axios_1 = require("axios");
 exports["default"] = (function (token, isDev) {
     if (!isDev) {
-        axios_1["default"].defaults.baseURL = 'https://storyboard-api.aside.fun';
+        axios_1["default"].defaults.baseURL = 'https://shot-api.infmonkeys.com';
     }
     axios_1["default"].interceptors.response.use(function (res) {
         var _a, _b, _c;
